@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANOKI | Premium Custom Design</title>
+  <link rel="icon" href="SANOKI.PNG">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .gradient-text {
+      background: linear-gradient(45deg, #ff4d4d, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* SCROLL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 glass backdrop-blur-xl relative">
+
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <h1 class="text-2xl font-extrabold tracking-widest text-red-600 hover:scale-105 transition">
+      SANOKI
+    </h1>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center space-x-10 font-medium">
+      <a href="#home" class="hover:text-red-500 transition">Home</a>
+      <a href="#products" class="hover:text-red-500 transition">Products</a>
+      <a href="#team" class="hover:text-red-500 transition">Team</a>
+      <a href="https://wa.me/6281229233214"
+         class="bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 hover:scale-105 transition">
+        Order
+      </a>
+    </div>
+
+    <!-- HAMBURGER -->
+    <label for="menu-toggle"
+      class="md:hidden cursor-pointer text-2xl z-50 transition-transform duration-300 peer-checked:rotate-90">
+      <i class="fas fa-bars peer-checked:hidden"></i>
+      <i class="fas fa-xmark hidden peer-checked:block"></i>
+    </label>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="
+    md:hidden
+    absolute top-full left-0 w-full
+    glass
+    px-6 py-8 text-center space-y-6
+    opacity-0 scale-95 pointer-events-none
+    peer-checked:opacity-100
+    peer-checked:scale-100
+    peer-checked:pointer-events-auto
+    transition-all duration-300 ease-out
+  ">
+    <a href="#home" class="block hover:text-red-500 transition">Home</a>
+    <a href="#products" class="block hover:text-red-500 transition">Products</a>
+    <a href="#team" class="block hover:text-red-500 transition">Team</a>
+    <a href="https://wa.me/6281229233214"
+       class="block bg-red-600 py-3 rounded-xl hover:bg-red-700 transition">
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 reveal">
+  <img src="SANOKI.png"
+       class="w-56 md:w-64 rounded-full border-4 border-red-600 shadow-xl mb-10 hover:scale-105 transition">
+
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+    Express Your <span class="gradient-text">Identity</span>
+  </h1>
+
+  <p class="text-gray-400 max-w-xl mb-10">
+    Jasa custom design premium dengan sentuhan profesional dan estetika tinggi.
+  </p>
+
+  <a href="#products"
+     class="border border-white/20 px-10 py-3 rounded-full
+            hover:bg-white hover:text-black hover:scale-105 transition">
+    Lihat Produk
+  </a>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-24 px-6 max-w-7xl mx-auto reveal">
+  <h2 class="text-3xl font-bold text-center mb-4">
+    Our <span class="text-red-600">Products</span>
+  </h2>
+  <p class="text-gray-400 text-center mb-16 max-w-xl mx-auto">
+    Koleksi desain eksklusif dengan kualitas premium.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-2 transition">
+      <img src="kaos depan.jpg" class="w-full h-[420px] object-cover group-hover:scale-110 transition duration-700">
+      <div class="p-6">
+        <h3 class="font-semibold text-lg">Custom T-Shirt</h3>
+        <p class="text-gray-400 text-sm mb-4">Desain kaos sesuai identitas brand.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-red-500 font-semibold">IDR 150K</span>
+          <a href="#" class="border px-4 py-1 rounded-full hover:bg-white hover:text-black transition">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-2 transition">
+      <img src="kaos belakang.jpg" class="w-full h-[420px] object-cover group-hover:scale-110 transition duration-700">
+      <div class="p-6">
+        <h3 class="font-semibold text-lg">Logo & Branding</h3>
+        <p class="text-gray-400 text-sm mb-4">Identitas visual profesional.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-red-500 font-semibold">IDR 300K</span>
+          <a href="#" class="border px-4 py-1 rounded-full hover:bg-white hover:text-black transition">Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass rounded-3xl overflow-hidden group hover:-translate-y-2 transition">
+      <img src="SANOKI.png" class="w-full h-[420px] object-cover group-hover:scale-110 transition duration-700">
+      <div class="p-6">
+        <h3 class="font-semibold text-lg">Poster & Sosmed</h3>
+        <p class="text-gray-400 text-sm mb-4">Konten visual menarik & konsisten.</p>
+        <div class="flex justify-between items-center">
+          <span class="text-red-500 font-semibold">IDR 100K</span>
+          <a href="#" class="border px-4 py-1 rounded-full hover:bg-white hover:text-black transition">Order</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="py-24 bg-[#0a0a0a] px-6 reveal">
+  <h2 class="text-3xl font-bold text-center mb-16">
+    Creative <span class="text-red-600">Team</span>
+  </h2>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div class="hover:-translate-y-2 transition">
+      <img src="ajik.jpg" class="rounded-2xl mb-4 grayscale hover:grayscale-0 transition">
+      <h4 class="font-bold">Ajik</h4>
+      <p class="text-xs text-red-500">Director</p>
+    </div>
+    <div class="hover:-translate-y-2 transition">
+      <img src="alyak.jpeg" class="rounded-2xl mb-4 grayscale hover:grayscale-0 transition">
+      <h4 class="font-bold">Alya</h4>
+      <p class="text-xs text-red-500">Designer</p>
+    </div>
+    <div class="hover:-translate-y-2 transition">
+      <img src="mandala.jpeg" class="rounded-2xl mb-4 grayscale hover:grayscale-0 transition">
+      <h4 class="font-bold">Mandala</h4>
+      <p class="text-xs text-red-500">Video</p>
+    </div>
+    <div class="hover:-translate-y-2 transition">
+      <img src="manda.jpeg" class="rounded-2xl mb-4 grayscale hover:grayscale-0 transition">
+      <h4 class="font-bold">Manda</h4>
+      <p class="text-xs text-red-500">Talent</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t border-white/10 reveal">
+  <div class="flex justify-center space-x-6 text-2xl mb-6">
+    <a href="#" class="hover:text-red-500 transition"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p class="text-gray-500 text-sm">© 2026 SANOKI Studio</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  // auto close menu
+  const toggle = document.getElementById('menu-toggle');
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => toggle.checked = false);
+  });
+
+  // scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
+</body>
+</html>
